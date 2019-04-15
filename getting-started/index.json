@@ -17,19 +17,21 @@
         ],
         "intro": {
             "text": "README.md",
-            "courseData": "init.sh",
-            "credits": "David McKay <rawkode@influxdata.com>"
+            "courseData": "init.sh"
         },
         "finish": {
             "text": "FINISH.md"
         }
     },
+    "files": [
+        "telegraf.conf"
+    ],
     "environment": {
         "showdashboard": true,
         "dashboards": [
             {
-                "name": "InfluxDB",
-                "port": 9999
+                "name": "InfluxDB UI",
+                "port": 19999
             }
         ],
         "uilayout": "editor-terminal",
