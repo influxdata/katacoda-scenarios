@@ -26,5 +26,5 @@ Authentication cannot be disabled with InfluxDB 2.0, so we also need to configur
 ```
 docker container run \
     quay.io/influxdb/influxdb:2.0.0-alpha \
-    influx setup --organisation bigcorp --bucket default --username p.dix --password einstein --token backtothefuture --force
+    influx setup --org bigcorp --bucket default --username p.dix --password einstein --token backtothefuture --force
 ```{{execute}}
