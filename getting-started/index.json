@@ -1,7 +1,7 @@
 {
     "pathwayTitle": "InfluxDB",
-    "title": "Getting Started with InfluxDB",
-    "description": "Learn how to start collecting system metrics with InfluxDB",
+    "title": "Getting Started with InfluxDB 2.x",
+    "description": "Learn how to start collecting system metrics with InfluxDB 2.x",
     "difficulty": "beginner",
     "time": "10-15 minutes",
     "details": {

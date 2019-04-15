@@ -25,9 +25,9 @@ Now we need to configure Telegraf with some plugins. We're going to scrape some 
 [[inputs.diskio]]
 
 [[outputs.influxdb_v2]]
-    urls = ["http://127.0.0.1:9999"]
+    urls = ["http://influxdb:9999"]
     token = "backtothefuture"
-    organisation = "bigcorp"
+    organization = "bigcorp"
     bucket = "default"
 </pre>
 
