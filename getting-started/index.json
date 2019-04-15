@@ -1,0 +1,38 @@
+{
+    "pathwayTitle": "InfluxDB",
+    "title": "Getting Started with InfluxDB",
+    "description": "Learn how to start collecting system metrics with InfluxDB",
+    "difficulty": "beginner",
+    "time": "10-15 minutes",
+    "details": {
+        "steps": [
+            {
+                "title": "Step 1: Starting InfluxDB",
+                "text": "1-starting-influxdb.md"
+            }
+        ],
+        "intro": {
+            "text": "README.md",
+            "courseData": "init.sh",
+            "credits": "David McKay <rawkode@influxdata.com>"
+        },
+        "finish": {
+            "text": "FINISH.md"
+        }
+    },
+    "environment": {
+        "showdashboard": true,
+        "dashboards": [
+            {
+                "name": "InfluxDB",
+                "port": 9999
+            }
+        ],
+        "uilayout": "editor-terminal",
+        "uisettings": "yaml",
+        "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\u001b[m\r\n"
+    },
+    "backend": {
+        "imageid": "docker-direct"
+    }
+}
