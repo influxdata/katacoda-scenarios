@@ -6,15 +6,22 @@ InfluxDB can be run as a Docker container using our pre-built alpha Docker image
 
 ## Running InfluxDB
 
-The following Docker command spins up an InfluxDB 2.0 container, which persists data in `/root/.influxdbv2`.
+First, lets create a directory on the host to persist our InfluxDB data.
 
 ```
 # Lets make a directory to persist our data
 mkdir -p /influxdb/data
+```{{execute}}
 
-# Lets create a Docker network to allow our containers to communicate with each other
+Next, we'll create a Docker network so that our InfluxDB container can be contacted by some extra containers later.
+
+```
 docker network create influxdb
+```{{execute}}
 
+The following Docker command spins up an InfluxDB 2.0 container, which persists data in `/root/.influxdbv2`, and is mapped back to the host on the directory we created earlier.
+
+```
 docker run -d \
     --volume "/influxdb/data:/root/.influxdbv2" \
     --publish "19999:9999" \

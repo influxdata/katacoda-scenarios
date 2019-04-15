@@ -13,6 +13,10 @@
             {
                 "title": "Step 2: Configuring Telegraf",
                 "text": "./steps/2-configuring-telegraf.md"
+            },
+            {
+                "title": "Step 3: Exploring Metrics",
+                "text": "./steps/3-exploring-metrics.md"
             }
         ],
         "intro": {

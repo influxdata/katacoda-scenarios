@@ -4,7 +4,14 @@ InfluxDB is just the database. We need to configure Telegraf, our collection age
 
 ## Task
 
-The following Docker command will run a Telegraf container. As we want to fetch metrics from the host / kernel, we'll need to run this container as privileged.
+Now we need to configure Telegraf with some plugins. We're going to scrape some essential systems metrics, so we'll configure plugins for:
+
+- cpu
+- disk
+- diskio
+- mem
+- net
+- system
 
 <pre class="file" data-filename="telegraf.conf" data-target="replace">
 [agent]
@@ -24,9 +31,12 @@ The following Docker command will run a Telegraf container. As we want to fetch 
     bucket = "default"
 </pre>
 
+The following Docker command will run a Telegraf container. As we want to fetch metrics from the host / kernel, we'll need to run this container as privileged.
+
 ```
 docker run -d \
     --network "influxdb" \
+    --privileged \
     -v $(pwd)/telegraf.conf:/etc/telegraf/telegraf.conf \
     telegraf:1.10
 ```{{execute}}
