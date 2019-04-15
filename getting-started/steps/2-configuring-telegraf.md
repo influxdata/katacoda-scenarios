@@ -26,6 +26,7 @@ The following Docker command will run a Telegraf container. As we want to fetch 
 
 ```
 docker run -d \
+    --network "influxdb" \
     -v ./telegraf.conf:/etc/telegraf/telegraf.conf \
     telegraf:1.10
 ```{{execute}}
