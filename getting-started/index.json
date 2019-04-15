@@ -9,6 +9,10 @@
             {
                 "title": "Step 1: Starting InfluxDB",
                 "text": "./steps/1-starting-influxdb.md"
+            },
+            {
+                "title": "Step 2: Configuring Telegraf",
+                "text": "./steps/2-configuring-telegraf.md"
             }
         ],
         "intro": {
