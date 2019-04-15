@@ -9,11 +9,17 @@ InfluxDB can be run as a Docker container using our pre-built alpha Docker image
 The following Docker command spins up an InfluxDB 2.0 container, which persists data in `/root/.influxdbv2`.
 
 ```
+# Lets make a directory to persist our data
 mkdir -p /influxdb/data
 
+# Lets create a Docker network to allow our containers to communicate with each other
+docker network create influxdb
+
 docker run -d \
-    -v /influxdb/data:/root/.influxdbv2 \
-    -p 19999:9999 \
+    --volume "/influxdb/data:/root/.influxdbv2" \
+    --publish "19999:9999" \
+    --network "influxdb" \
+    --name "influxdb" \
     quay.io/influxdb/influxdb:2.0.0-alpha
 ```{{execute}}
 
@@ -25,7 +31,7 @@ Authentication cannot be disabled with InfluxDB 2.0, so we also need to configur
 
 ```
 docker container run \
-    --net=host \
+    --network "influxdb" \
     quay.io/influxdb/influxdb:2.0.0-alpha \
-    influx setup --host "http://localhost:19999" --org bigcorp --bucket default --username p.dix --password einstein --token backtothefuture --force
+    influx setup --host "http://influxdb:9999" --org bigcorp --bucket default --username p.dix --password einstein --token backtothefuture --force
 ```{{execute}}
