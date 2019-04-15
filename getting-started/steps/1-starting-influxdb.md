@@ -13,8 +13,8 @@ mkdir -p /influxdb/data
 
 docker run -d \
     -v /influxdb/data:/root/.influxdbv2 \
-    -p 9999:9999 \
+    -p 19999:9999 \
     quay.io/influxdb/influxdb:2.0.0-alpha
 ```{{execute}}
 
-Once started, the [dashboard](https://[[HOST_SUBDOMAIN]]-9999-[[KATACODA_HOST]].environments.katacoda.com/) is viewable on port [9999](https://[[HOST_SUBDOMAIN]]-9999-[[KATACODA_HOST]].environments.katacoda.com/). The next steps will explain the details and how to view the data.
+Once started, the [dashboard](https://[[HOST_SUBDOMAIN]]-19999-[[KATACODA_HOST]].environments.katacoda.com/) is viewable on port [9999](https://[[HOST_SUBDOMAIN]]-19999-[[KATACODA_HOST]].environments.katacoda.com/). The next steps will explain the details and how to view the data.
