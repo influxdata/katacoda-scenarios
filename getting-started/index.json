@@ -8,7 +8,7 @@
         "steps": [
             {
                 "title": "Step 1: Starting InfluxDB",
-                "text": "1-starting-influxdb.md"
+                "text": "./steps/1-starting-influxdb.md"
             }
         ],
         "intro": {
