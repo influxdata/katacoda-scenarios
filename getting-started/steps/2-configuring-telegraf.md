@@ -6,7 +6,7 @@ InfluxDB is just the database. We need to configure Telegraf, our collection age
 
 The following Docker command will run a Telegraf container. As we want to fetch metrics from the host / kernel, we'll need to run this container as privileged.
 
-<pre class="file" data-filename="telegraf.yml" data-target="replace">
+<pre class="file" data-filename="telegraf.conf" data-target="replace">
 [agent]
     interval = "5s"
 
