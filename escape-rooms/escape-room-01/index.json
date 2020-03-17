@@ -1,0 +1,52 @@
+{
+    "pathwayTitle": "InfluxDB Escape Rooms",
+    "title": "Escape Room 01",
+    "description": "Can you escape within 30 minutes?",
+    "difficulty": "advanced",
+    "time": "30 minutes",
+    "details": {
+        "steps": [
+            {
+                "title": "Step 1: Deploy InfluxDB",
+                "text": "./steps/1-deploy-influxdb.md",
+                "verify": "./steps/1-verify.sh"
+            },
+            {
+                "title": "Step 2: Deploy Telegraf",
+                "text": "./steps/2-deploy-telegraf.md",
+                "verify": "./steps/2-verify.sh",
+                "answer": "./steps/2-answer.md"
+            }
+        ],
+        "intro": {
+            "text": "README.md",
+            "courseData": "init.sh"
+        },
+        "finish": {
+            "text": "FINISH.md"
+        },
+        "assets": {
+            "host01": [
+              {
+                "file": "telegraf.conf",
+                "target": "/root/"
+              }
+            ]
+        }
+    },
+    "environment": {
+        "showdashboard": true,
+        "dashboards": [
+            {
+                "name": "InfluxDB UI",
+                "port": 19999
+            }
+        ],
+        "uilayout": "editor-terminal",
+        "uisettings": "toml",
+        "uimessage1": "\u001b[32mLet the games begin...\u001b[m\r\n\r\n\r\n"
+    },
+    "backend": {
+        "imageid": "docker-direct"
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "title": "Escape Rooms",
+    "description": "Escape Production Outages Before the System Fallsover",
+    "icon": "fa-biohazard",
+    "courses": [
+      {
+        "course_id": "escape-room-01",
+        "title": "Escape Room 01",
+        "description": "Can you escape?"
+      }
+    ]
+  }
+  
